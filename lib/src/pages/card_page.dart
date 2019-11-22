@@ -8,7 +8,9 @@ class CardPage extends StatelessWidget {
       ),
       body:ListView(
         children: <Widget>[
-          _cardTipo1()
+          _cardTipo1(),
+          SizedBox(height: 30.0),
+          _cardTipo2()
         ],
       ),
     );
@@ -35,6 +37,28 @@ class CardPage extends StatelessWidget {
               ),
             ],
           )
+        ],
+      ),
+    );
+  }
+
+  Widget _cardTipo2(){
+    return Card(
+      child: Column(
+        children: <Widget>[
+          FadeInImage(
+            image: NetworkImage('https://fondosdepantalla1080.files.wordpress.com/2014/08/3840x2160.jpg'),
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            fadeInDuration: Duration(milliseconds: 200),
+            height: 300.0,
+            fit: BoxFit.cover,
+          ),
+          /*Image(
+            image: NetworkImage('https://fondosdepantalla1080.files.wordpress.com/2014/08/3840x2160.jpg'),
+          ),*/
+          Container(
+            padding: EdgeInsets.all(10.0),
+              child: Text("No tengo idea que poner"))
         ],
       ),
     );
